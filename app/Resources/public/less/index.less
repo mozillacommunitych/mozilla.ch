@@ -138,38 +138,58 @@
 /* The upcoming events tile uses the event structure from mozilla.org. However
    those styles are not optimized for being tile content. */
 
-#upcoming-events .container {
-    margin-left: 40px;
-    margin-right: 40px;
-    width: auto;
-    max-width: 540px;
+#upcoming-events {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 
-    .event-detail, .featured-event {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .container {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        position: inherit;
+        text-align: inherit;
         width: auto;
-        margin-right: 0;
-    }
 
-    .event-detail {
-        max-width: 340px;
-    }
+        .inner-container {
+          margin-bottom: 0px;
+        }
 
-    h2 {
-        padding: 0;
-        margin: 0;
-    }
+        .event-detail, .featured-event {
+            width: auto;
+            margin-right: 0;
+        }
 
-    h3 {
-        text-align: left;
-        padding: 0;
-        margin: 0 0 12px;
-    }
+        .event-detail {
+            max-width: 340px;
+        }
 
-    .event-info::before {
-        display: inline-block;
-        font-family: "FA-Icons-Home";
-        width: 1.5em;
-        text-align: center;
-        color: #B1B1AD;
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+
+        h3 {
+            text-align: left;
+            padding: 0;
+            margin: 0 0 12px;
+        }
+
+        .event-info::before {
+            display: inline-block;
+            font-family: "FA-Icons-Home";
+            width: 1.5em;
+            text-align: center;
+            color: #B1B1AD;
+        }
     }
 }
 
